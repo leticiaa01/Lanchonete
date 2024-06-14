@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+body {
+    background-image: url(imagens/marvel.webp.jpeg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 240px;
+    height: 320px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card div {
+    padding: 16px;
+    text-align: center;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    font-size: .9rem;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.card span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card button {
+    background-color: rgb(240, 194, 44);
+    border: none;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #137de8;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.section-title h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-family:  "Honk", system-ui;;
+}
+
+.container2{
+    background-color: rgb(250, 220, 88);
+    display: center;
+    vertical-align: right;
+    text-align: center;
+}
+
+#carrinho {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#itensCarrinho {
+    list-style-type: none;
+    padding: 0;
+}
+
+#itensCarrinho li {
+    margin-bottom: 8px;
+}
+
+#itensCarrinho li span {
+    margin-left: 8px;
+}
+
+#total {
+    font-weight: bold;
+}
+
+button#finalizar {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button#finalizar:hover {
+    background-color: #cc0000;
+}

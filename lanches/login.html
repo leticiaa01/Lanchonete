@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" href="image" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <link href="/home/lelet/Downloads/imagens/superman.png" rel="icon">
+</head>
+<body>
+    <div id="caixa-de-login">
+        <div class="page">
+            <form method="POST" class="formLogin" onsubmit="return validarLogin()">
+                <h1>Seja Bem Vindo ao Burger Geek</h1>
+                <p>Digite seus dados para acessar sua conta</p>
+                <label for="email">Nome de usuário ou e-mail:</label>
+                <input type="text" id="email" name="email" placeholder="Digite seu nome de usuário ou e-mail" autofocus>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                <input type="submit" value="Acessar" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validarLogin() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            var usuarioValido = "savinho";
+            var senhaValida = "123456";
+
+            if (email === usuarioValido && password === senhaValida) {
+                alert("Login bem-sucedido!");
+                window.location.href = "barra.html"; 
+                return false;
+            } else {
+                alert("Nome de usuário ou senha inválidos. Tente novamente.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

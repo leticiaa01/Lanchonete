@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 194, 44); /* Fundo amarelo claro */
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffeb3b; /* Fundo amarelo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ac1507;
+}
+
+h2 {
+    color: #d32f2f; /* Vermelho escuro */
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #d32f2f; /* Vermelho escuro */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d32f2f; /* Vermelho escuro */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #d32f2f; /* Vermelho escuro */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #c62828; /* Vermelho mais escuro */
+}
+
+.hidden {
+    display: none;
+}
+
+#total {
+    font-weight: bold;
+    color: #d32f2f; /* Vermelho escuro */
+}
+
+#carrinho {
+    margin-bottom: 20px;
+}

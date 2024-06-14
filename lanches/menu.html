@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geek Burger</title>
+    <link rel="stylesheet" href="menu.css">
+    <link href="imagens/superman.png" rel="icon">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+            $('#finalizar').click(function() {
+                // Obter o valor total
+                const total = $('#total').text();
+
+                // Redirecionar para a página de pagamento com o total como parâmetro na URL
+                window.location.href = 'pagamento.html?total=${total}';
+            });
+        });
+
+        function irParaPagamento() {
+            // Redirecionar o navegador para pagamento.html
+            window.location.href = "pagamento.html";
+        }
+
+    </script>
+</head>
+<header>
+        <br></br>
+        <div class="container2"><br></br>
+            <img src="imagens/superman.png" width="200px" alt="Bem Vindo ao Burger Geek">
+                <p><h1> Olá! Seja Bem Vindo ao Burger Geek.</h1></p><br></br>
+        </div>
+</header>
+<body>
+    <img src="imagens/marvel.webp.jpeg">
+
+    <link rel="stylesheet" href="barra.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="login.html">Login</a>
+    <a href="pagamento.html">Pagamento</a>
+    <a href="contato.html">Contato</a>
+  </div>
+
+<div class="section-title">
+    <h1>Combos</h1>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="imagens/kids.jpeg" alt="Combo Kids">
+        <div>
+            <h1>Combo Kids</h1>
+            <h2>Hambúrguer de carne, queijo cheddar, alface e tomate, acompanhados de batatas fritas e um milkshake de chocolate.</h2>
+            <span>R$35,00</span>
+            <button onclick="adicionarAoCarrinho('Combo Kids', 35)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/homemaranha.jpeg" alt="Aranhaverso">
+        <div>
+            <h1>Aranhaverso</h1>
+            <h2>Hambúrguer com alface, tomate, cebola e picles. Acompanhado de batata frita e milkshake de morango com cobertura.</h2>
+            <span>R$40,00</span>
+            <button onclick="adicionarAoCarrinho('Combo Homem-Aranha', 40)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/batgirl.png" alt="Combo Batgirl">
+        <div>
+            <h1>Combo Batgirl</h1>
+            <h2>Hambúrguer vegetariano de grão de bico com quinoa. Acompanhando uma batata frita e um refrigerante da sua escolha.</h2>
+            <span>R$45,00</span>
+            <button onclick="adicionarAoCarrinho('Combo Batgirl', 45)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/flash.jpeg" alt="Mega Combo Flash">
+        <div>
+            <h1>Mega Flash</h1>
+            <h2>Dois Hambúrgueres artesanais. Acompanhados de batata frita, barca de batata com bacon e cheddar, nuggets e dois refrigerantes.</h2>
+            <span>R$50,00</span>
+            <button onclick="adicionarAoCarrinho('Mega Combo Flash', 50)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/hulk.jpeg" alt="Super Combo Hulk">
+        <div>
+            <h1>Super Combo Hulk</h1>
+            <h2>2 X-Salada, com cheddar, bacon, picles e maionese temperada. Acompanhado com batata frita, e milkshake de ovomaltine.</h2>
+            <span>R$55,00</span>
+            <button onclick="adicionarAoCarrinho('Super Combo Hulk', 55)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/familia.jpeg" alt="Combo Família">
+        <div>
+            <h1>Combo Família</h1>
+            <h2>Dois hambúrgueres artesanais,cheddar, bacon, salada. Acompanhados com batata frita, nuggets e dois refrigerantes.</h2>
+            <span>R$60,00</span>
+            <button onclick="adicionarAoCarrinho('Combo Família', 60)">Adicionar</button>
+        </div>
+    </div>
+</div>
+
+<div class="section-title">
+    <h1>Bebidas</h1>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="imagens/agua.jpeg" alt="Água Mineral">
+        <div>
+            <h1>Água Mineral</h1>
+            <span>R$3,00</span>
+            <button onclick="adicionarAoCarrinho('Água Mineral', 3)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/coca.jpeg" alt="Coca-cola">
+        <div>
+            <h1>Coca-cola</h1>
+            <h2>Latinha</h2>
+            <span>R$5,00</span>
+            <button onclick="adicionarAoCarrinho('Coca-cola', 5)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/zero.jpeg" alt="Coca-cola Zero">
+        <div>
+            <h1>Coca-cola Zero</h1>
+            <h2>Latinha</h2>
+            <span>R$5,00</span>
+            <button onclick="adicionarAoCarrinho('Coca-cola Zero', 5)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/laranja.jpeg" alt="Fanta Laranja">
+        <div>
+            <h1>Fanta Laranja</h1>
+            <h2>Latinha</h2>
+            <span>R$5,00</span>
+            <button onclick="adicionarAoCarrinho('Fanta Laranja', 5)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/uva.jpeg" alt="Fanta Uva">
+        <div>
+            <h1>Fanta Uva</h1>
+            <h2>Latinha</h2>
+            <span>R$5,00</span>
+            <button onclick="adicionarAoCarrinho('Fanta Uva', 5)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/guarana.jpeg" alt="Guaraná">
+        <div>
+            <h1>Guaraná</h1>
+            <h2>Latinha</h2>
+            <span>R$5,00</span>
+            <button onclick="adicionarAoCarrinho('Guaraná', 5)">Adicionar</button>
+        </div>
+    </div>
+</div>
+
+<div class="section-title">
+    <h1>Lanches</h1>
+</div> 
+<div class="container">
+    <div class="card">
+        <img src="imagens/cebola.jpeg" alt="Cebola dos anéis">
+        <div>
+            <h1>Cebola dos anéis</h1>
+            <h2>Onion rings suculenta.</h2>
+            <span>R$18,00</span>
+            <button onclick="adicionarAoCarrinho('Cebola dos anéis', 18)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/galinha.jpeg" alt="Galinha de ferro">
+        <div>
+            <h1>Galinha de ferro</h1>
+            <h2>Delicioso nuggets de frango com catupiry.</h2>
+            <span>R$20,00</span>
+            <button onclick="adicionarAoCarrinho('Galinha de ferro', 20)">Adicionar</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="imagens/batfritas.jpeg" alt="Bat Fritas">
+        <div>
+            <h1>Bat Fritas</h1>
+            <h2>Batata frita tradicional.</h2>
+            <span>R$24,00</span>
+            <button onclick="adicionarAoCarrinho('Bat Fritas', 24)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/avengers.jpeg" alt="Batata Avengers">
+        <div>
+            <h1>Batata Avengers</h1>
+            <h2>Batata frita com cheddar e bacon.</h2>
+            <span>R$27,90</span>
+            <button onclick="adicionarAoCarrinho('Batata Avengers', 27.90)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/batman.jpeg" alt="Bat Burguer">
+        <div>
+            <h1>Bat Burguer</h1>
+            <h2>Batata frita rústica.</h2>
+            <span>R$28,00</span>
+            <button onclick="adicionarAoCarrinho('Bat Burger', 28)">Adicionar</button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <img src="imagens/xgeek.jpeg" alt="X-Geek">
+        <div>
+            <h1>X-Geek</h1>
+            <h2>Hambúrguer de carne, queijo, presunto, bacon, picles, alface e maionese temperada.</h2>
+            <span>R$28,60</span>
+            <button onclick="adicionarAoCarrinho('X-Geek', 28.60)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/joker.png" alt="Joker Burger">
+        <div>
+            <h1>Joker Burguer</h1>
+            <h2>Hamburguer de carne, queijo, cebola, alface, tomate.</h2>
+            <span>R$29,30</span>
+            <button onclick="adicionarAoCarrinho('Joker Burguer', 29.30)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/thor.png" alt="Thor Burguer">
+        <div>
+            <h1>Thor Burguer</h1>
+            <h2>Hamburguer de frango, queijo, cebolas caramelizadas.</h2>
+            <span>R$30,50</span>
+            <button onclick="adicionarAoCarrinho('Thor Burguer', 30.50)">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="imagens/xgeek2.jpeg" alt="X-Geek Duplo">
+        <div>
+            <h1>X-Geek Duplo</h1>
+            <h2>Duas camadas de hamburguer de carne e queijo cheddar.</h2>
+            <span>R$31,00</span>
+            <button onclick="adicionarAoCarrinho('X-Geek Duplo', 31.00)">Adicionar</button>
+        </div>
+    </div>
+    <h1>Carrinho de Compras</h1>
+    <div id="carrinho">
+        <ul id="itensCarrinho"></ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+        <button id="finalizar" onclick="irParaPagamento()">finalizar</button>
+
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedido</title>
+    <link rel="stylesheet" href="pagamento.css">
+    <link href="imagens/superman.png" rel="icon">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script>
+       $(document).ready(function() {
+            // Obter o valor total da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const total = urlParams.get('total');
+
+            // Exibir o total na página
+            $('#total').text(total);
+        });
+</script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        
+        <p>Total: $<span id="total">0.00</span></p>
+
+
+        <br>
+        <label for="Nome">Nome de identificação: </label>
+        <input type="text" id="nomeUsu">
+        <br>
+        <label for="Número">Número para contato: </label>
+        <input type="number" id="NumeroContato">
+        <h2>Forma do pedido: </h2>
+        <label for="Retirar">Retirar no local:</label>
+        <input type="radio" id="Retirar" name="pedido" value="retirar">
+        <label for="Entrega">Entrega:</label>
+        <input type="radio" id="Entrega" name="pedido" value="entrega">
+        <br>
+        <br>
+        <div id="enderecoSection" class="hidden">
+            <label for="Endereco">Endereço:</label>
+            <input type="text" id="Endereco">
+            <label for="Complemento">Complemento:</label>
+            <input type="text" id="Complemento">
+        </div>
+        <h2 id="pagamentoTitle" class="hidden">Forma de Pagamento:</h2>
+        <div id="pagamentoSection" class="hidden">
+            <label for="CartaoCredito">Cartão de crédito:</label>
+            <input type="radio" id="CartaoCredito" name="pagamento" value="cartao">
+            <label for="Pix">Pix:</label>
+            <input type="radio" id="Pix" name="pagamento" value="pix">
+        </div>
+        <br>
+        <div id="pixSection" class="hidden">
+            PIX GEEK Burger: 85987357916
+        </div>
+        <div id="cartaoSection" class="hidden">
+            <label for="NomeCartao">Nome no cartão:</label>
+            <input type="text" id="NomeCartao">
+            <label for="NumeroCartao">Número do cartão:</label>
+            <input type="text" id="NumeroCartao">
+            <label for="ValidadeCartao">Data de validade:</label>
+            <input type="text" id="ValidadeCartao" placeholder="MM/AA">
+            <label for="CvvCartao">CVV:</label>
+            <input type="text" id="CvvCartao">
+        </div>
+        <br>
+        <label for="Enviar">Concluir Pagamento:</label>
+        <input type="submit" id="submitBtn">
+    </div>
+
+    <script>
+        document.getElementById('Retirar').addEventListener('change', function() {
+            document.getElementById('enderecoSection').classList.add('hidden');
+            document.getElementById('pagamentoTitle').classList.add('hidden');
+            document.getElementById('pagamentoSection').classList.add('hidden');
+            document.getElementById('cartaoSection').classList.add('hidden');
+        });
+
+        document.getElementById('Entrega').addEventListener('change', function() {
+            document.getElementById('enderecoSection').classList.remove('hidden');
+            document.getElementById('pagamentoTitle').classList.remove('hidden');
+            document.getElementById('pagamentoSection').classList.remove('hidden');
+        });
+
+        document.getElementById('CartaoCredito').addEventListener('change', function() {
+            document.getElementById('cartaoSection').classList.remove('hidden');
+        });
+
+        document.getElementById('Pix').addEventListener('change', function() {
+            document.getElementById('pixSection').classList.remove('hidden');
+            document.getElementById('cartaoSection').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

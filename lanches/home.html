@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATIONS</title>
+
+</head>
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+
+            text-align: center;
+            background-color: #ac1507; 
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url();            
+        }
+
+        .container {
+            display: flex;
+            gap: 4em; /* Espaçamento entre os cards */
+            flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+            justify-content: center;
+            margin-top: 5em;
+        }
+
+        .card {
+            background-color: #ac1507;
+            border-radius: 20px;
+            height: 300px;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+            align-items: center;
+            padding: 20px;
+            justify-content: center;
+            width: 200px;
+            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+            transform: scale(1);
+            display: flex;            
+            animation: rotate 6s linear infinite;
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            background-color: rgb(252, 247, 247);
+        }
+
+        .card img {
+            max-width: 90%; /* Garantir que a imagem não ultrapasse a largura do card */
+            height: auto; /* Manter a proporção da imagem */
+            border-radius: 10px; /* Adicionar borda arredondada à imagem */
+            margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+        }
+
+        @keyframes rotate {
+            0% {
+                --angle: 0deg;
+            }
+            100% {
+                --angle: 360deg;
+            }
+        }
+
+        hr {
+            width: 100%;
+            border: 0;
+            border-top: 10px solid rgb(240, 194, 44);
+            border-radius: 0%;
+            margin: 20px 0;
+        }
+
+        main{
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 1.4em;
+            
+
+            
+        }
+
+        .container2{
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .section{
+            flex: 1;
+            padding: 10px;
+        }
+
+        .separador{
+            border-left: 2px solid #ff0000;
+            height: auto;
+        }
+        
+
+       
+</style>
+<body>
+<header>
+  <div class="container">
+  <a class="card" href="menu.html">
+    <img src="imagens/cardapio.jpeg" alt="imagem1">
+    
+
+
+  </a>
+
+  <a class="card" href="https://maps.app.goo.gl/s4o8Qsd6Phv3ckGX8">
+    <img src="imagens/loc.jpeg">
+  
+  </a>
+  
+</div>
+
+
+
+
+</header>
+
+<hr>
+
+<main>
+   
+
+    <h1>Saiba sobre nós:</h1>
+    <h2>Bem-vindo à Lanchonete Geek – Onde os heróis ganham vida em cada mordida!</h2>
+
+    <h4>
+
+        <div class="container2">
+            <div class="section">
+                <h3>Nossa Missão: </h3>
+                <p>
+                <br>
+                Na Lanchonete Geek, combinamos nossa paixão por cultura pop 
+                <br> e gastronomia para criar uma experiência única e deliciosa 
+                <br> para nossos clientes. Aqui, os fãs de super-heróis e amantes de comida encontram um ponto de encontro perfeito, onde cada lanche é uma homenagem aos nossos heróis favoritos.
+                </p>
+            </div>
+
+            
+            <div class="separador"></div>
+            <div class="section">
+                <h3>Nossa História:</h3>
+                Tudo começou com um grupo de amigos geeks que adoram filmes, quadrinhos, jogos e, claro, boa comida.
+                <br> Decidimos transformar nossa paixão em um negócio, criando uma lanchonete temática 
+                <br> onde cada prato é inspirado pelos personagens que amamos. Nossa jornada tem sido emocionante, cheia de criatividade e, o mais importante, muita diversão!
+            </div>
+
+            <div class="separador"></div>
+            <div class="section">
+                <p>
+                <h3>Nosso Ambiente:</h3>
+                Nossa lanchonete é decorada com pôsteres, action figures e memorabilia 
+                <br> dos universos dos quadrinhos, filmes e séries de TV. Cada canto é uma celebração da cultura geek,  <br> oferecendo um espaço aconchegante e inspirador para os fãs. 
+                <br>Venha e tire uma foto com nossos murais temáticos e compartilhe sua experiência com a hashtag #LanchoneteGeek!
+                </p>
+            </div>
+
+            <div class="separador"></div>
+            <div class="section">
+               <p> 
+                <h3>Junte-se a Nós:</h3>
+                Estamos ansiosos para recebê-lo na Lanchonete Geek, onde cada refeição é uma aventura 
+                <br>épica e cada cliente é um herói. Venha experimentar nossos lanches únicos e 
+                <br>faça parte da nossa comunidade de geeks apaixonados!
+               </p>
+            </div>
+    </h4>
+        </div>
+</main>
+   
+    
+</body>
+</html>
